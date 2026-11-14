@@ -88,6 +88,7 @@ const inlineCss = inlined.map(href => INLINE_STYLES[href]
     {blogLive && <link rel="alternate" type="application/rss+xml" title="Miguel Cordero Collar · Blog" href="/rss.xml" />}
     {inlineCss && <style is:inline data-base-styles set:html={inlineCss} />}
     {linked.map(href => <link rel="stylesheet" href={href} />)}
+    {header && <link rel="expect" href="#main-content" blocking="render" />}
     <script is:inline>document.documentElement.classList.add("has-js");</script>
     <slot name="head" />
   </head>

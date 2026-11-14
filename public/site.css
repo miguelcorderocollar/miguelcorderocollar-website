@@ -15,3 +15,14 @@
   .homepage-collection-links { grid-template-columns: 1fr; }
 }
 html:not(.has-js) .js-only { display: none; }
+
+/* Cross-document view transitions: a short cross-fade between pages while the
+   header stays in place. Uses the personal-style interface curve; browsers
+   without support, and reduced-motion users, navigate instantly as before. */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+}
+.site-header { view-transition-name: site-header; }
+::view-transition-group(*) { animation-duration: 180ms; animation-timing-function: cubic-bezier(.23, 1, .32, 1); }
+::view-transition-old(root) { animation-duration: 120ms; }
