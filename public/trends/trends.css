@@ -1,17 +1,9 @@
 :root {
-  --trend-accent: #e8512a;
-  --trend-accent-soft: rgba(232, 81, 42, 0.13);
-  --trend-grid: rgba(0, 0, 0, 0.14);
-  --trend-shadow: rgba(0, 0, 0, 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --trend-accent: #ff8561;
-    --trend-accent-soft: rgba(255, 133, 97, 0.16);
-    --trend-grid: rgba(211, 211, 211, 0.18);
-    --trend-shadow: rgba(211, 211, 211, 0.26);
-  }
+  /* These pages are always dark (mcc-dark); use the dark tokens unconditionally. */
+  --trend-accent: #ff8561;
+  --trend-accent-soft: rgba(255, 133, 97, 0.16);
+  --trend-grid: rgba(211, 211, 211, 0.18);
+  --trend-shadow: rgba(211, 211, 211, 0.26);
 }
 
 .trends-page {

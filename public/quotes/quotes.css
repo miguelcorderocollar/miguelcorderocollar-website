@@ -1,15 +1,8 @@
 :root {
-  --quotes-accent: #e8512a;
-  --quotes-rule: rgba(0, 0, 0, 0.18);
-  --quotes-paper: rgba(232, 81, 42, 0.055);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --quotes-accent: #ff8561;
-    --quotes-rule: rgba(211, 211, 211, 0.22);
-    --quotes-paper: rgba(255, 133, 97, 0.08);
-  }
+  /* These pages are always dark (mcc-dark); use the dark tokens unconditionally. */
+  --quotes-accent: #ff8561;
+  --quotes-rule: rgba(211, 211, 211, 0.22);
+  --quotes-paper: rgba(255, 133, 97, 0.08);
 }
 
 .quotes-page {

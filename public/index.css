@@ -1,14 +1,15 @@
 @import url("https://fonts.cdnfonts.com/css/jetbrains-mono-2");
 
 :root {
+  color-scheme: light dark;
   --font-family: "JetBrains Mono", monospace;
   --line-height: 1.2rem;
   --border-thickness: 2px;
-  --text-color: #000;
-  --text-color-alt: #666;
-  --background-color: #fff;
-  --background-color-alt: #eee;
-  --accent-color: rgba(0, 0, 0, 0.5);
+  --text-color: light-dark(#000, #d3d3d3);
+  --text-color-alt: light-dark(#666, #aaa);
+  --background-color: light-dark(#fff, #000);
+  --background-color-alt: light-dark(#eee, #111);
+  --accent-color: light-dark(rgba(0, 0, 0, 0.5), rgba(211, 211, 211, 0.5));
 
   --font-weight-normal: 500;
   --font-weight-medium: 600;
@@ -20,16 +21,6 @@
   font-style: normal;
   font-variant-numeric: tabular-nums lining-nums;
   font-size: 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #d3d3d3;
-    --text-color-alt: #aaa;
-    --background-color: #000;
-    --background-color-alt: #111;
-    --accent-color: rgba(211, 211, 211, 0.5);
-  }
 }
 
 * {

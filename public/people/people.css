@@ -1,15 +1,8 @@
 :root {
-  --people-accent: #e8512a;
-  --people-accent-soft: rgba(232, 81, 42, 0.12);
-  --people-shadow: rgba(0, 0, 0, 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --people-accent: #ff8561;
-    --people-accent-soft: rgba(255, 133, 97, 0.16);
-    --people-shadow: rgba(211, 211, 211, 0.26);
-  }
+  /* These pages are always dark (mcc-dark); use the dark tokens unconditionally. */
+  --people-accent: #ff8561;
+  --people-accent-soft: rgba(255, 133, 97, 0.16);
+  --people-shadow: rgba(211, 211, 211, 0.26);
 }
 
 .people-page {
