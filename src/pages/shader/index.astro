@@ -25,7 +25,7 @@ const schema = {
           influences collection.
         </p>
         <div class="shader-intro__actions">
-          <button type="button" id="explain-button">What is this?</button>
+          <button type="button" id="explain-button" commandfor="shader-dialog" command="show-modal">What is this?</button>
           <a href="/docs/image-shader.md">Read the notes →</a>
         </div>
       </header>
@@ -110,8 +110,8 @@ const schema = {
       </article>
     </template>
 
-    <dialog id="shader-dialog" aria-labelledby="shader-dialog-title">
-      <div class="dialog-heading"><p class="eyebrow">A tiny technical note</p><button type="button" class="quiet-button" id="close-dialog">Close</button></div>
+    <dialog id="shader-dialog" closedby="any" aria-labelledby="shader-dialog-title">
+      <div class="dialog-heading"><p class="eyebrow">A tiny technical note</p><button type="button" class="quiet-button" id="close-dialog" commandfor="shader-dialog" command="close">Close</button></div>
       <h2 id="shader-dialog-title">What the shader is doing</h2>
       <p>Each image is reduced to luminance, then sampled on a grid. Dark pixels become larger dots. Light pixels become smaller dots. A little deterministic noise nudges the dots and adds the imperfect texture.</p>
       <p>The WebGL version runs this work in a fragment shader. Browsers without WebGL use the same recipe in a Canvas 2D fallback, so the experiment stays useful while we tune the visual language.</p>

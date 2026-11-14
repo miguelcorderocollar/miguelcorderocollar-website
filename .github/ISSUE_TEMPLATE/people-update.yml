@@ -7,7 +7,7 @@ body:
       value: |
         Use this form for content changes to `/people/`. A single issue can cover a batch of people when the entries belong to the same update.
 
-        For summaries, follow [Writing People descriptions](https://github.com/miguelcorderocollar/miguelcorderocollar.github.io/blob/master/docs/people-descriptions.md).
+        For summaries, follow [Writing People descriptions](https://github.com/miguelcorderocollar/miguelcorderocollar-website/blob/master/docs/people-descriptions.md).
 
   - type: input
     id: target

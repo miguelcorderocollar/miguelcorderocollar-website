@@ -1,9 +1,15 @@
+// The buttons use declarative invoker commands (commandfor/command) and the
+// dialog uses closedby="any". These listeners are fallbacks for browsers
+// without those features.
 const dialog = document.querySelector("#shader-dialog");
-const explainButton = document.querySelector("#explain-button");
-const closeDialog = document.querySelector("#close-dialog");
 
-explainButton.addEventListener("click", () => dialog.showModal());
-closeDialog.addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
-});
+if (!("command" in HTMLButtonElement.prototype)) {
+  document.querySelector("#explain-button").addEventListener("click", () => dialog.showModal());
+  document.querySelector("#close-dialog").addEventListener("click", () => dialog.close());
+}
+
+if (!("closedBy" in HTMLDialogElement.prototype)) {
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+}
