@@ -1,0 +1,131 @@
+name: Propose a blog topic
+description: Capture a blog article idea or a request to draft one.
+title: "[Blog] "
+labels: ["blog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a blog article before drafting. Follow the [blog-writing skill](https://github.com/miguelcorderocollar/miguelcorderocollar-website/blob/master/.agents/skills/blog-writing/SKILL.md) and [Blog](https://github.com/miguelcorderocollar/miguelcorderocollar-website/blob/master/docs/blog.md). New articles stay drafts until publishing is approved.
+
+  - type: input
+    id: title
+    attributes:
+      label: Working title
+      description: Give the article a specific working title. It can change during drafting.
+      placeholder: "Why I really like T3 Code"
+    validations:
+      required: true
+
+  - type: textarea
+    id: thesis
+    attributes:
+      label: Core idea / thesis
+      description: State the post's one main point in a sentence or two.
+      placeholder: T3 Code is the control plane I use every day for coding agents.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reader
+    attributes:
+      label: Target reader
+      description: Name who the article is for and what they already know.
+      placeholder: People who already use coding agents and juggle several providers.
+    validations:
+      required: true
+
+  - type: textarea
+    id: points
+    attributes:
+      label: Key points to cover
+      description: List the points the draft should include, in order. Note anything that belongs in a separate post.
+      placeholder: |
+        - What the tool is in practice
+        - Why one place matters
+        - What still needs a person
+    validations:
+      required: true
+
+  - type: textarea
+    id: angle
+    attributes:
+      label: Personal angle or experience
+      description: Include only real experience. Mark anything that still needs to be asked, and do not invent anecdotes.
+      placeholder: I use this as the place I start and watch coding-agent threads. Ask me for more concrete moments before drafting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: listing
+    attributes:
+      label: Listing description
+      description: One plain sentence for the blog listing, metadata, and feed.
+      placeholder: Why I use T3 Code as my daily control plane for the coding agents I already pay for.
+    validations:
+      required: true
+
+  - type: input
+    id: slug
+    attributes:
+      label: Proposed slug
+      description: A stable, lowercase, hyphenated slug. Changing an established slug later needs a redirect.
+      placeholder: why-i-really-like-t3-code
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated topics. Leave this blank if you are not sure yet.
+      placeholder: tooling, ai
+
+  - type: input
+    id: format
+    attributes:
+      label: Format
+      description: Use Markdown for ordinary writing. Use MDX when the article needs a component, diagram, or embed.
+      placeholder: "Markdown (.md)"
+
+  - type: textarea
+    id: assets
+    attributes:
+      label: Assets
+      description: Describe any diagram, image, or clip, and why it belongs. Include source, credit, and license for anything that is not original. Photographs go through the shader pipeline.
+      placeholder: A short SVG diagram, only if it explains the idea faster than text.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References and links
+      description: Link public sources and note internal pages or related posts to connect.
+      placeholder: |
+        - Source: https://example.com
+        - Internal: /projects/
+
+  - type: input
+    id: status
+    attributes:
+      label: Status
+      description: Where this topic is right now, such as idea, ready to draft, draft, or ready to publish.
+      placeholder: idea
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes or constraints
+      description: Add voice, privacy, or drafting constraints. Drafts stay unpublished until publishing is approved.
+      placeholder: Follow the blog-writing skill. Keep the article a draft until I approve publishing.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: The core idea is stated clearly, or I have noted that it still needs sharpening.
+          required: true
+        - label: The personal angle includes only real experience, or marks what still needs to be asked.
+          required: true
+        - label: I have listed source, credit, or license details for any asset that is not original.
+          required: true
