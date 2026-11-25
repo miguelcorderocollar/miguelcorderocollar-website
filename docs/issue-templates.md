@@ -7,6 +7,7 @@ Use a template when the request matches one of the recurring site updates below.
 - **Add or update People entries** covers one person or a batch for `/people/`. Use headings to separate entries in a batch.
 - **Add or update quotes** covers new quotes, corrections, attribution changes, and quote batches.
 - **Update curriculum or profile content** covers copy and data on the homepage, including education, experience, projects, skills, interests, curriculum, and contact details.
+- **Propose a blog topic** covers a blog article idea or draft request, including the thesis, reader, personal angle, slug, and sources.
 - **Propose a new page or section** covers a new destination or a substantial new section with its own content and visitor outcome.
 - **Refine a feature or design** covers implementation work on an existing page, including layout, interaction, accessibility, and visual changes.
 
@@ -18,4 +19,4 @@ Leave a blank issue for a bug report, broken link, deployment or configuration p
 
 Keep content work separate from implementation work when possible. A content issue can describe the result without prescribing code. A design or feature issue should explain the problem and outcome before suggesting a solution.
 
-For People summaries, follow [`docs/people-descriptions.md`](people-descriptions.md). For image changes, include the source and credit details described in [`docs/people-portraits.md`](people-portraits.md) or [`docs/image-shader.md`](image-shader.md).
+For People summaries, follow [`docs/people-descriptions.md`](people-descriptions.md). For image changes, include the source and credit details described in [`docs/people-portraits.md`](people-portraits.md) or [`docs/image-shader.md`](image-shader.md). For blog articles, follow [`docs/blog.md`](blog.md) and the blog-writing skill.
